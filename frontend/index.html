@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cadastro de Regiões</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Cadastro de Regiões</h1>
+
+    <form id="form-regiao">
+      <label>UF <span class="required">*</span></label>
+      <select id="uf" required>
+        <option value="">Selecione</option>
+        <option>AC</option><option>AL</option><option>AP</option><option>AM</option>
+        <option>BA</option><option>CE</option><option>DF</option><option>ES</option>
+        <option>GO</option><option>MA</option><option>MT</option><option>MS</option>
+        <option>MG</option><option>PA</option><option>PB</option><option>PR</option>
+        <option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
+        <option>RS</option><option>RO</option><option>RR</option><option>SC</option>
+        <option>SP</option><option>SE</option><option>TO</option>
+      </select>
+
+      <label>Região <span class="required">*</span></label>
+      <input id="nome" type="text" required maxlength="200" />
+
+      <input id="btn-submit" type="submit" value="Inserir" />
+    </form>
+
+    <div class="filter">
+      <label><input type="checkbox" id="incluirInativas" /> Incluir inativas</label>
+    </div>
+
+    <table id="tabela-regioes">
+      <thead>
+        <tr>
+          <th>UF</th>
+          <th>Região</th>
+          <th>Situação</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
